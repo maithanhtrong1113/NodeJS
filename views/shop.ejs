@@ -21,8 +21,16 @@
     </header>
 
     <main>
-      <h1>My Products</h1>
-      <p>List of all the products...</p>
+      <% if(products.length >0) { %>
+      <h1>All Product</h1>
+      <!-- render product -->
+      <% for(let product of products) { %>
+      <h2><%= product.title %></h2>
+      <% } %>
+      <!-- end render -->
+      <% } else{ %>
+      <h1>No Product</h1>
+      <% } %>
     </main>
   </body>
 </html>
